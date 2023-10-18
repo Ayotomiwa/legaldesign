@@ -31,7 +31,7 @@ img.mb-4 {
 }
 
 .action {
-    border: blue 3px solid;
+    /*border: blue 3px solid;*/
     display: flex;
     flex:1;
     flex-direction: row;
@@ -105,6 +105,14 @@ img.mb-4 {
         flex-direction: column;
     }
 
+    label.btn {
+        font-size: 14px;
+        padding: 8px 5px;
+        text-align: left;
+        display: block;
+        margin-bottom: 10px;
+    }
+
     .action button {
         margin: 10px 0;
         width: 100%;
@@ -116,7 +124,7 @@ img.mb-4 {
         padding: 0 15px;
     }
 
-    #intro-statement {
-        width: 100%;
+    #intro-statement{
+        word-break-wrap: break-word;
     }
 }

@@ -11,7 +11,7 @@
 </head>
 <body id="guidedContainer">
 <div class="section" id="guidedContract">
-    <div class="container mt-4" >
+    <div class="d-flex justify-content-center align-items-center" >
         <div class="text-center" id="intro-statement">
             <h2>Your Journey with VoxPop Starts Here!</h2>
             <p>
@@ -130,21 +130,6 @@
         <button class="btn btn-success" onclick="welcome()">Accept Terms of agreement</button>
     </div>
 </div>
-<div class="hidden" id="videoContainer">
-    <div class="m-auto">
-        <h2>Congratulations, You made it to the End!!!!</h2>
-        <p class="text-center">
-            Enjoy the VoxPop Experience
-        </p>
-    </div>
-    <video autoplay controls height="540" muted width="720">
-        <source src="assets/Hurray.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="mt-4 m-auto">
-        <button class="btn btn-outline-danger" onclick="showFullContract()">View Full Terms</button>
-    </div>
-</div>
 <div class="modal fade" id="Stage1Modal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -195,6 +180,22 @@
         </div>
     </div>
 </div>
+<div class="hidden" id="videoContainer">
+    <div class="m-auto">
+        <h2>Congratulations, You made it to the End!!!!</h2>
+        <p class="text-center">
+            Enjoy the VoxPop Experience
+        </p>
+    </div>
+    <video autoplay controls height="540" muted width="720">
+        <source src="assets/Hurray.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="mt-4 m-auto">
+        <button class="btn btn-outline-danger" onclick="showFullContract()">View Full Terms</button>
+    </div>
+</div>
+
 <script>
     function hideAll() {
         const section = document.getElementById('guidedContract');
