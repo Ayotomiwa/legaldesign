@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>VoxPop Contract App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body id="guidedContainer">
+<div class="section" id="guidedContract">
+    <div class="container mt-4" >
+        <div class="text-center" id="intro-statement" style="width:700px">
+            <h2>Your Journey with VoxPop Starts Here!</h2>
+            <p>
+                Terms and conditions. let's make it clear. before you proceed, lend me your ear.
+                Setting the rules, protecting your rights, so you can enjoy the <strong>VoxPop</strong> delight.
+            </p>
+            <strong> There are no right or wrong answers</strong>
+        </div>
+    </div>
+    <div class="my-4 visible gap-4" id="stage1">
+        <p class="h4 text-center">Tell us about you</p>
+        <input class="btn-check" id="btncheck1" type="checkbox">
+        <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="btncheck1">
+            <i class="fas fa-circle me-2"></i>
+            I am over 13 years old
+            <i class="fas fa-circle ms-2"></i>
+        </label>
+
+
+        <input class="btn-check" id="btncheck2" type="checkbox">
+        <label class="btn btn-outline-secondary d-flex justify-content-between align-items-center" for="btncheck2">
+            <i class="fas fa-square me-2"></i>
+            I will be responsible for my account
+            <i class="fas fa-square ms-2"></i></label>
+
+        <input class="btn-check" id="btncheck3" type="checkbox">
+        <label class="btn btn-outline-warning d-flex justify-content-between align-items-center" for="btncheck3">
+            <i class="bi bi-triangle-fill me-3"></i>
+            I will use Vox pop lawfully and honestly
+            <i class="bi bi-triangle-fill ms-3"></i>
+        </label>
+
+        <input class="btn-check" id="btncheck8" type="checkbox">
+        <label class="btn btn-outline-danger d-flex justify-content-between align-items-center" for="btncheck8">
+            <i class="fas fa-solid fa-star me-3"></i>
+            I want to own my content.
+            <i class="fas fa-solid fa-star ms-3"></i>
+        </label>
+        <div class="ms-auto me-auto">
+            <button class="btn btn-success" data-action="submit" onclick="nextStage('stage1')">Submit</button>
+        </div>
+    </div>
+    <div class="my-4 hidden gap-4" id="stage2">
+        <p class="h4 text-center">What do you want to do on Vox Pop?</p>
+        <input class="btn-check" id="btncheck4" type="checkbox">
+        <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="btncheck4">
+            <i class="fas fa-circle me-2"></i>
+            Share Pictures or Videos
+            <i class="fas fa-circle ms-2"></i>
+        </label>
+
+        <input class="btn-check" id="btncheck5" type="checkbox">
+        <label class="btn btn-outline-secondary d-flex justify-content-between align-items-center" for="btncheck5">
+            <i class="fas fa-square me-2"></i>
+            Message Friends & Family
+            <i class="fas fa-circle ms-2"></i>
+        </label>
+
+
+        <input  class="btn-check" id="btncheck7" type="checkbox">
+        <label class="btn btn-outline-warning d-flex justify-content-between align-items-center"
+               for="btncheck7">
+            <i class="bi bi-triangle-fill me-3"></i>
+            Connect with Like Minded People
+            <i class="bi bi-triangle-fill ms-3"></i>
+        </label>
+
+        <input class="btn-check" id="btncheck6" type="checkbox">
+        <label class="btn btn-outline-danger d-flex justify-content-between align-items-center" for="btncheck6">
+            <i class="fas fa-solid fa-star me-3"></i>
+            View interesting new and content
+            <i class="fas fa-solid fa-star ms-3"></i>
+        </label>
+        <div class="ms-auto me-auto">
+            <button class="btn btn-success" data-action="submit" onclick="nextStage('stage2')">Submit</button>
+        </div>
+    </div>
+    <div class="my-4 hidden gap-4" id="stage3">
+        <p class="h4 text-center">Our values wrapped off in some stuff you need to know</p>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 ">
+                    <div class="column column-primary" id="transparency" >
+                        <h2 class="mb-3 text-center">Transparency</h2>
+                        <ul>
+                            <li><strong>Service Funding: </strong>Ads are shown without revealing your identity to advertisers.</li>
+                            <li><strong>Privacy Policy: </strong>We show you how you data is being use. Read our privacy policy to find out</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="column column-secondary" id="integrity">
+                        <h2 class="mb-3 text-center">Integrity</h2>
+                        <ul>
+                            <li><strong>Content: </strong>We may remove content or terminate accounts if needed to uphold platform integrity.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="column column-warning" id="responsibility">
+                        <h2 class="mb-3 text-center">Social Responsibility</h2>
+                        <ul>
+                            <li><strong>Terms Updates: </strong>We notify users of significant changes with at least 30 days' notice.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ms-auto me-auto">
+            <button class="btn btn-success" data-action="next" onclick="nextStage('stage3')">Next</button>
+        </div>
+    </div>
+    <div class="my-4 hidden gap-4" id="stage4">
+        <p class="h4">What would you like to do?</p>
+        <button class="btn btn-outline-danger" onclick="showFullContract()">View Full Contract</button>
+        <button class="btn btn-success" onclick="welcome()">Accept Terms of agreement</button>
+    </div>
+</div>
+<div class="hidden" id="videoContainer">
+    <div class="m-auto">
+        <h2>Congratulations, You made it to the End!!!!</h2>
+        <p class="text-center">
+            Enjoy the VoxPop Experience
+        </p>
+    </div>
+    <video autoplay controls height="540" muted width="720">
+        <source src="assets/Hurray.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="mt-4 m-auto">
+        <button class="btn btn-outline-danger" onclick="showFullContract()">View Full Terms</button>
+    </div>
+</div>
+<div class="modal fade" id="Stage1Modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Stage1ModalLabel">Your Part of the Deal 🤝</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6>All the options are necessary to keep your "Part of the Deal"</h6>
+                <p>Here's a little agreement between us:</p>
+                <ul>
+                    <li> Everyone is welcome, but if you are under 13, you'll have to wait a bit
+                        to join the VoxPop Family.
+                    <li>Your account is you responsibility.</li>
+                    <li>We want everyone to have fun, so we keep it respectful, legal and honest here.</li>
+                    <li> What you post? You own it, but let us use it to make VoxPop amazing for you!</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-danger" onclick="showFullContract()">View Full Contract</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">I understand</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Stage2Modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Stage2ModalLabel">The services we offer 🎁</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Our mission is to foster a community grounded in <strong>Transparency</strong>, <strong>Integrity</strong>
+                    and <strong>Social Responsibility</strong>.</p>
+                <p>No matter what you've chosen to do on VoxPop, we offer that and so much more.</p>
+                <ul>
+                    <li><strong>Here to share pictures or videos?</strong>, you can share your world with our vast community.</li>
+                    <li><strong>Message close ones?</strong>, you'll appreciate the secure and safe environment we've fostered for this</li>
+                    <li><strong>Want to connect with like-minded people?</strong> We pride ourselves on providing seamless experiences for those seeking meaningful interactions.</li>
+                    <li><strong>For those who wish to view interesting news and content</strong>, we continuously innovate, making sure you're always connected with the latest and viral content</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-danger" onclick="showFullContract()">View Full Contract</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">I understand</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function hideAll() {
+        const section = document.getElementById('guidedContract');
+        section.classList.add('hidden');
+        section.classList.remove('visible');
+
+        document.getElementById('intro-statement').classList.add('hidden');
+
+        const stages = section.querySelectorAll('div[id^="stage"]');
+        stages.forEach(stage => {
+            stage.classList.add('hidden');
+            stage.classList.remove('visible');
+        });
+    }
+    function showElement(id) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.classList.remove('hidden');
+            element.classList.add('visible');
+        }
+    }
+
+    function showFullContract() {
+        window.location.href = 'contract.html';
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('#Stage1Modal .btn-success').addEventListener('click', function() {
+            updateButtonForStage('stage1');
+        });
+
+        document.querySelector('#Stage2Modal .btn-success').addEventListener('click', function() {
+            updateButtonForStage('stage2');
+        });
+    });
+    function updateButtonForStage(stage) {
+        const button = document.querySelector(`#${stage} button.btn-success`);
+        button.innerText = "Next";
+        button.setAttribute('data-action', 'next');
+    }
+    function nextStage(stage) {
+        const button = document.querySelector(`#${stage} button.btn-success`);
+        const action = button.getAttribute('data-action');
+
+        if (action === 'submit') {
+            if (stage === 'stage1') {
+                const modal = new bootstrap.Modal(document.getElementById('Stage1Modal'));
+                modal.show();
+            } else if (stage === 'stage2') {
+                const modal = new bootstrap.Modal(document.getElementById('Stage2Modal'));
+                modal.show();
+            }
+        } else if (action === 'next') {
+            let nextStageElement;
+            if (stage === 'stage1') {
+                nextStageElement = document.getElementById('stage2');
+            } else if (stage === 'stage2') {
+                nextStageElement = document.getElementById('stage3');
+            } else if (stage === 'stage3') {
+                nextStageElement = document.getElementById('stage4');
+            }
+            if (nextStageElement) {
+                nextStageElement.classList.remove('hidden');
+                nextStageElement.classList.add('visible');
+                nextStageElement.scrollIntoView({ behavior: 'smooth' });
+            }
+            button.classList.add('hidden');
+        }
+    }
+    function welcome() {
+        hideAll();
+        showElement('videoContainer');
+        const videoDiv = document.getElementById('videoContainer');
+        videoDiv.scrollIntoView({ behavior: 'smooth' });
+        const videoElement = document.getElementById('#videoContainer video');
+        if (videoElement) {
+            videoElement.play().catch(error => {
+                console.error("Video play failed:", error);
+            });
+        }
+    }
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
